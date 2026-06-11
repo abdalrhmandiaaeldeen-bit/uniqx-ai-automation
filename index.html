@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Uniqx by Abdalrhman Diaa | AI Automation Systems</title>
     <meta name="description" content="Uniqx by Abdalrhman Diaa builds AI automation systems with n8n, OpenAI, WhatsApp, Telegram, CRMs, APIs, and workflow architecture.">
-    <link rel="stylesheet" href="./styles.css?v=20260611-uniqx-official">
+    <link rel="stylesheet" href="./styles.css?v=20260611-scroll-flow">
   </head>
   <body>
     <header class="site-header">
@@ -18,6 +18,7 @@
       </a>
       <nav class="nav" aria-label="Main navigation">
         <a href="#systems">Systems</a>
+        <a href="#flow">Flow</a>
         <a href="#skills">Skills</a>
         <a href="#industries">Industries</a>
         <a href="#contact">Contact</a>
@@ -60,6 +61,74 @@
           <div class="signal-card card-c">
             <span>Output</span>
             <strong>Reply + saved lead</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="flow" class="scroll-story" data-story aria-label="Scroll-driven automation flow">
+        <div class="story-sticky">
+          <div class="story-copy">
+            <p class="eyebrow">Scroll Story</p>
+            <h2>From scattered manual work to one calm automated flow.</h2>
+            <p>Business work usually starts messy: messages, missed follow-ups, sheets, and team reminders. A good automation system does not just move data. It organizes the pressure into a clear operating flow.</p>
+            <div class="story-steps" aria-label="Automation story stages">
+              <span class="is-active" data-step="0">Manual chaos</span>
+              <span data-step="1">AI workflow</span>
+              <span data-step="2">Clean output</span>
+            </div>
+          </div>
+
+          <div class="story-visual">
+            <div class="story-progress" aria-hidden="true"><span></span></div>
+            <div class="story-canvas">
+              <div class="story-grid" aria-hidden="true"></div>
+
+              <div class="chaos-item item-one">
+                <small>Inbox</small>
+                <strong>14 open messages</strong>
+              </div>
+              <div class="chaos-item item-two">
+                <small>Calls</small>
+                <strong>Missed follow-up</strong>
+              </div>
+              <div class="chaos-item item-three">
+                <small>Sheet</small>
+                <strong>Unqualified leads</strong>
+              </div>
+              <div class="chaos-item item-four">
+                <small>Team</small>
+                <strong>Manual reminders</strong>
+              </div>
+              <div class="chaos-item item-five">
+                <small>Support</small>
+                <strong>Repeated answers</strong>
+              </div>
+
+              <div class="story-core">
+                <span>n8n + AI</span>
+                <strong>Workflow Core</strong>
+                <small>read, decide, route, save</small>
+              </div>
+
+              <div class="story-line line-one" aria-hidden="true"></div>
+              <div class="story-line line-two" aria-hidden="true"></div>
+              <div class="story-line line-three" aria-hidden="true"></div>
+
+              <div class="output-stack" aria-label="Organized automation outputs">
+                <article>
+                  <span>01</span>
+                  <strong>Qualified lead saved</strong>
+                </article>
+                <article>
+                  <span>02</span>
+                  <strong>Customer reply sent</strong>
+                </article>
+                <article>
+                  <span>03</span>
+                  <strong>Team notified</strong>
+                </article>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -316,6 +385,59 @@
         localStorage.setItem('uniqx-theme', next);
         label.textContent = next === 'dark' ? 'Light' : 'Dark';
       });
+
+      const story = document.querySelector('[data-story]');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const compactStory = window.matchMedia('(max-width: 760px)');
+
+      const clamp = (value, min = 0, max = 1) => Math.min(Math.max(value, min), max);
+      const setStoryProgress = () => {
+        if (!story) return;
+
+        const rect = story.getBoundingClientRect();
+        const range = Math.max(1, rect.height - window.innerHeight);
+        const raw = clamp((0 - rect.top) / range);
+        const progress = reduceMotion.matches || compactStory.matches ? 1 : raw;
+        const organize = clamp((progress - 0.18) / 0.48);
+        const outputs = clamp((progress - 0.58) / 0.32);
+        const smooth = progress * progress * (3 - 2 * progress);
+
+        story.style.setProperty('--story-progress', smooth.toFixed(3));
+        story.style.setProperty('--story-progress-width', `${(smooth * 100).toFixed(1)}%`);
+        story.style.setProperty('--story-grid-y', `${(smooth * -42).toFixed(1)}px`);
+        story.style.setProperty('--story-chaos', (1 - organize).toFixed(3));
+        story.style.setProperty('--story-chaos-opacity', (0.34 + ((1 - organize) * 0.66)).toFixed(3));
+        story.style.setProperty('--story-flow', organize.toFixed(3));
+        story.style.setProperty('--story-lines', clamp((progress - 0.36) / 0.24).toFixed(3));
+        story.style.setProperty('--story-output', outputs.toFixed(3));
+        story.style.setProperty('--story-output-y', `${((1 - outputs) * 36).toFixed(1)}px`);
+        story.style.setProperty('--story-core-scale', (0.9 + (organize * 0.1)).toFixed(3));
+        story.style.setProperty('--item-one-x', `${(organize * 245).toFixed(1)}px`);
+        story.style.setProperty('--item-one-y', `${(organize * 185).toFixed(1)}px`);
+        story.style.setProperty('--item-one-rot', `${(-7 + (organize * 7)).toFixed(2)}deg`);
+        story.style.setProperty('--item-two-x', `${(organize * -235).toFixed(1)}px`);
+        story.style.setProperty('--item-two-y', `${(organize * 66).toFixed(1)}px`);
+        story.style.setProperty('--item-two-rot', `${(6 - (organize * 6)).toFixed(2)}deg`);
+        story.style.setProperty('--item-three-x', `${(organize * 210).toFixed(1)}px`);
+        story.style.setProperty('--item-three-y', `${(organize * -155).toFixed(1)}px`);
+        story.style.setProperty('--item-three-rot', `${(5 - (organize * 5)).toFixed(2)}deg`);
+        story.style.setProperty('--item-four-x', `${(organize * -205).toFixed(1)}px`);
+        story.style.setProperty('--item-four-y', `${(organize * -128).toFixed(1)}px`);
+        story.style.setProperty('--item-four-rot', `${(-5 + (organize * 5)).toFixed(2)}deg`);
+        story.style.setProperty('--item-five-x', `${(organize * 270).toFixed(1)}px`);
+        story.style.setProperty('--item-five-y', `${(organize * -12).toFixed(1)}px`);
+        story.style.setProperty('--item-five-rot', `${(-3 + (organize * 3)).toFixed(2)}deg`);
+
+        const phase = progress < 0.34 ? 0 : progress < 0.68 ? 1 : 2;
+        story.querySelectorAll('[data-step]').forEach((step, index) => {
+          step.classList.toggle('is-active', index === phase);
+        });
+      };
+
+      setStoryProgress();
+      window.addEventListener('scroll', setStoryProgress, { passive: true });
+      window.addEventListener('resize', setStoryProgress);
+      compactStory.addEventListener('change', setStoryProgress);
     </script>
   </body>
 </html>
