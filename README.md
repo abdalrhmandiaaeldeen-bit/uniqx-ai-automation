@@ -1,41 +1,38 @@
-# AI Automation Portfolio
+# Uniqx by Abdalrhman Diaa
 
-معرض أعمال لأنظمة AI Automation مبنية على n8n و AI Agents.
+Official portfolio site for AI automation systems, n8n workflows, AI customer support agents, lead capture systems, and workflow consulting.
 
-الموقع العام:
+Live site:
 https://abdalrhmandiaaeldeen-bit.github.io/automation-portfolio/
 
-## الفكرة
+## Positioning
 
-بدل عرض أسماء عملاء أو براندات، المعرض يشرح نوع الأوتوميشن نفسه:
+Uniqx is presented as a growing AI automation brand led by Abdalrhman Diaa.
 
-- ماذا يستقبل؟
-- كيف يفهم طلب العميل؟
-- أين يحفظ البيانات؟
-- كيف يرد أو ينبه الفريق؟
-- ما المشكلة العملية التي يحلها؟
+The site focuses on what automation systems do, how they solve business problems, and which tools are used, without exposing client names, private workflow exports, credentials, or sensitive business data.
 
-## الموجود في الريبو
+## Site sections
 
-- `index.html`: صفحة الموقع.
-- `styles.css`: تصميم الموقع.
-- `case-studies.md`: ملخص داخلي لأنواع الأوتوميشن المختارة.
+- Hero and brand positioning
+- AI automation system categories
+- Animated automation lab
+- Skill showcase
+- Tool stack
+- Industry examples
+- Before / after business impact
+- Contact links
 
-لا يحتوي الريبو على exports خام من n8n، ولا credentials، ولا webhook URLs، ولا IDs حساسة، ولا بيانات عملاء.
+## Public contact links
 
-## نماذج الأوتوميشن المعروضة
+- LinkedIn: https://www.linkedin.com/in/abdalrhmandiaa/
+- Facebook: https://www.facebook.com/abdelrhmandiaaAI
+- WhatsApp: https://wa.me/message/2RP4AK5WXXLLE1
 
-1. WhatsApp Ecommerce Sales Assistant
-2. Arabic Support Assistant
-3. Healthcare Chat Booking Assistant
-4. Voice AI Sales Call Automation
-5. Automotive Service Reception Assistant
+## Files
 
-## حالة المشروع
+- `index.html`: website markup
+- `styles.css`: website design, animations, and theme system
+- `assets/`: brand image assets
+- `case-studies.md`: internal portfolio notes
 
-هذه نسخة Portfolio عامة قابلة للتطوير. الخطوات القادمة المقترحة:
-
-- إضافة اسم براند شخصي ولوجو.
-- إضافة لينك WhatsApp أو LinkedIn للتواصل.
-- إضافة screenshots بعد إخفاء البيانات.
-- إضافة صفحة تفصيلية لكل نوع أوتوميشن.
+No raw n8n exports or secret configuration files are included.

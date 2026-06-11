@@ -1,59 +1,45 @@
-# Automation Case Studies
+# Automation System Notes
 
-تمت مراجعة workflows من n8n قراءة فقط. لم يتم تعديل أو تشغيل أي workflow داخل n8n أثناء إعداد هذا المعرض.
+These notes describe system categories that can be presented publicly without exposing client names, private workflow exports, credentials, webhook URLs, or sensitive business data.
 
-## المعروض في الموقع
+## Public system categories
 
 ### WhatsApp Ecommerce Sales Assistant
 
-المشكلة: المتاجر تحتاج رد سريع على أسئلة المنتجات والأسعار وجمع بيانات الطلب من واتساب.
+Problem: stores need faster replies to product questions, pricing, website links, and order collection.
 
-ما يفعله: يستقبل رسالة العميل، ينظف البيانات، يستخدم سياق المنتجات للرد، ثم يحفظ الطلبات الجاهزة في جدول متابعة.
+What it does: receives customer messages, cleans the data, uses product context to reply, and saves ready orders or qualified leads.
 
-الحالة: Demo-ready.
+Positioning: sales and support automation.
 
 ### Arabic Support Assistant
 
-المشكلة: خدمة العملاء العربية تحتاج ردود واضحة ومناسبة للسياق بدل الردود العامة.
+Problem: Arabic-speaking businesses need clear support replies that follow context and avoid random answers.
 
-ما يفعله: يصنف نية العميل، يختار مسار الرد المناسب، ويرد بأسلوب عربي مهذب مع الحفاظ على حدود المعلومات المتاحة.
+What it does: detects intent, routes the request, replies in a controlled style, and hands off when needed.
 
-الحالة: Demo-ready.
+Positioning: customer support automation.
 
 ### Healthcare Chat Booking Assistant
 
-المشكلة: مراكز الخدمات الطبية تفقد leads عندما تكون رسائل الحجز غير منظمة أو ناقصة البيانات.
+Problem: clinics and service providers lose leads when booking messages are incomplete or scattered.
 
-ما يفعله: يحدد نية الحجز، يسأل عن البيانات الناقصة خطوة بخطوة، ويحفظ lead عندما تكون البيانات كافية.
+What it does: detects booking intent, asks for missing details, saves qualified leads, and prepares the team for follow-up.
 
-الحالة: Demo-ready.
+Positioning: appointment and lead capture automation.
 
 ### Voice AI Sales Call Automation
 
-المشكلة: فرق المبيعات تحتاج ربط المكالمات بذاكرة العميل، تحديث حالته، والمتابعة عند عدم الرد.
+Problem: sales teams need call context, lead status updates, memory, and follow-up after missed or incomplete calls.
 
-ما يفعله: يستقبل أحداث المكالمة، يبني سياق المحادثة، يولد ردود AI، يحفظ الذاكرة، ويرسل متابعة عند الحاجة.
+What it does: receives call events, builds context, generates AI responses, saves memory, and triggers follow-up logic.
 
-الحالة: Architecture-ready. يحتاج تحقق credentials وwebhooks قبل أي تشغيل production.
+Positioning: voice AI sales workflow.
 
 ### Automotive Service Reception Assistant
 
-المشكلة: مراكز الصيانة تحتاج استقبال أولي يجمع بيانات السيارة والخدمة والموعد قبل تدخل الفريق.
+Problem: service centers need structured intake before the team spends time on back-and-forth questions.
 
-ما يفعله: يدير محادثة عربية لجمع نوع السيارة، سنة الموديل، الخدمة المطلوبة، الموعد، الاسم، ورقم الهاتف.
+What it does: collects model, year, service type, slot, name, and phone before confirmation or handoff.
 
-الحالة: Reception demo.
-
-## غير معروض كـ production
-
-### Social Media Content Automation
-
-الفكرة جيدة، لكن النسخة التي تمت مراجعتها فيها مسار نشر غير مكتمل ونود توليد إنجليزي غير مفعلة.
-
-### WhatsApp Healthcare Voice Prototype
-
-نموذج قوي من ناحية الفكرة، لكنه يحتوي placeholders خاصة بالتشغيل، لذلك لا يتم عرضه كنظام مكتمل.
-
-### Older Test Workflows
-
-نسخ تجريبية أو مكررة أو بها تعبيرات placeholder. تصلح كأرشيف داخلي فقط.
+Positioning: reception and service booking automation.
