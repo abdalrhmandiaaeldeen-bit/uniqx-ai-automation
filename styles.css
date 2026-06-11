@@ -168,23 +168,104 @@ main {
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  min-height: 40px;
-  padding: 0 12px;
+  gap: 10px;
+  min-height: 42px;
+  padding: 0 13px 0 8px;
   color: var(--text);
   background: color-mix(in srgb, var(--surface) 88%, transparent);
   border: 1px solid var(--line);
   border-radius: 999px;
   cursor: pointer;
   font-weight: 900;
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
 
-.toggle-dot {
-  width: 18px;
-  height: 18px;
-  background: linear-gradient(135deg, var(--cyan), var(--accent));
+.theme-toggle:hover {
+  border-color: color-mix(in srgb, var(--cyan) 46%, var(--line));
+  box-shadow: 0 0 24px color-mix(in srgb, var(--cyan) 18%, transparent);
+}
+
+.theme-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--bg) 54%, transparent);
+  border: 1px solid var(--line);
   border-radius: 999px;
-  box-shadow: 0 0 20px color-mix(in srgb, var(--cyan) 52%, transparent);
+  overflow: hidden;
+}
+
+.sun-icon,
+.moon-icon {
+  position: absolute;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.sun-icon {
+  width: 13px;
+  height: 13px;
+  background: #f59e0b;
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 4px color-mix(in srgb, #f59e0b 18%, transparent),
+    0 0 18px color-mix(in srgb, #f59e0b 58%, transparent);
+}
+
+.sun-icon::before {
+  position: absolute;
+  inset: -8px;
+  content: "";
+  background:
+    linear-gradient(#f59e0b, #f59e0b) center top / 2px 5px no-repeat,
+    linear-gradient(#f59e0b, #f59e0b) center bottom / 2px 5px no-repeat,
+    linear-gradient(90deg, #f59e0b, #f59e0b) left center / 5px 2px no-repeat,
+    linear-gradient(90deg, #f59e0b, #f59e0b) right center / 5px 2px no-repeat;
+}
+
+.moon-icon {
+  width: 17px;
+  height: 17px;
+  background: #dbeafe;
+  border-radius: 999px;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--cyan) 46%, transparent);
+}
+
+.moon-icon::after {
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  width: 17px;
+  height: 17px;
+  content: "";
+  background: color-mix(in srgb, var(--bg) 86%, var(--surface));
+  border-radius: 999px;
+}
+
+:root:not([data-theme="dark"]) .sun-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+:root:not([data-theme="dark"]) .moon-icon {
+  opacity: 0;
+  transform: translateX(9px) rotate(20deg) scale(0.6);
+}
+
+:root[data-theme="dark"] .sun-icon {
+  opacity: 0;
+  transform: translateX(-9px) rotate(-35deg) scale(0.6);
+}
+
+:root[data-theme="dark"] .moon-icon {
+  opacity: 1;
+  transform: rotate(-14deg) scale(1);
+}
+
+.toggle-text {
+  min-width: 38px;
+  text-align: left;
 }
 
 .hero {
