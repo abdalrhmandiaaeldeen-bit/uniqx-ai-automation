@@ -3,7 +3,7 @@
 Official portfolio site for AI automation systems, n8n workflows, AI customer support agents, lead capture systems, and workflow consulting.
 
 Live site:
-https://abdalrhmandiaaeldeen-bit.github.io/automation-portfolio/
+https://abdalrhmandiaaeldeen-bit.github.io/uniqx-ai-automation/
 
 ## Positioning
 
@@ -15,11 +15,13 @@ The site focuses on what automation systems do, how they solve business problems
 
 - Hero and brand positioning
 - AI automation system categories
-- Animated automation lab
+- Process overview
+- Visual system showcase
 - Skill showcase
 - Tool stack
 - Industry examples
 - Before / after business impact
+- System examples
 - Contact links
 
 ## Public contact links
