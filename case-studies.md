@@ -1,69 +1,59 @@
-# n8n Workflow Review
+# Automation Case Studies
 
-This review is based on read-only inspection. Nothing was changed in n8n.
+تمت مراجعة workflows من n8n قراءة فقط. لم يتم تعديل أو تشغيل أي workflow داخل n8n أثناء إعداد هذا المعرض.
 
-## Featured
+## المعروض في الموقع
 
 ### WhatsApp Ecommerce Sales Assistant
 
-Problem: customers need fast product discovery, price answers, website links, and order collection over WhatsApp.
+المشكلة: المتاجر تحتاج رد سريع على أسئلة المنتجات والأسعار وجمع بيانات الطلب من واتساب.
 
-Why it qualifies: the workflow normalizes WhatsApp messages, uses an AI sales assistant with catalog context, formats safe customer replies, sends WhatsApp responses, and appends ready orders to Google Sheets.
+ما يفعله: يستقبل رسالة العميل، ينظف البيانات، يستخدم سياق المنتجات للرد، ثم يحفظ الطلبات الجاهزة في جدول متابعة.
 
-Portfolio positioning: ecommerce WhatsApp assistant for catalog support and order capture.
+الحالة: Demo-ready.
 
-Status: demo-ready case study. Production activation and credential checks should be handled separately.
+### Arabic Support Assistant
 
-### Arabic Publishing Support Assistant
+المشكلة: خدمة العملاء العربية تحتاج ردود واضحة ومناسبة للسياق بدل الردود العامة.
 
-Problem: a publisher needs Arabic customer support for books, publishing inquiries, website links, contact info, and recommendations.
+ما يفعله: يصنف نية العميل، يختار مسار الرد المناسب، ويرد بأسلوب عربي مهذب مع الحفاظ على حدود المعلومات المتاحة.
 
-Why it qualifies: the workflow has intent detection, dedicated reply paths, AI recommendation branches, memory, and WhatsApp response formatting. A related website chat version is also available.
-
-Portfolio positioning: Arabic customer support assistant for publishing and ecommerce.
-
-Status: demo-ready case study.
+الحالة: Demo-ready.
 
 ### Healthcare Chat Booking Assistant
 
-Problem: clinics lose leads when booking requests and specialty questions come through chat without structured follow-up.
+المشكلة: مراكز الخدمات الطبية تفقد leads عندما تكون رسائل الحجز غير منظمة أو ناقصة البيانات.
 
-Why it qualifies: the workflow handles Telegram messages, detects booking intent locally to reduce token usage, uses AI only for fallback messages, captures phone/customer data, saves qualified leads to Google Sheets, and sends replies.
+ما يفعله: يحدد نية الحجز، يسأل عن البيانات الناقصة خطوة بخطوة، ويحفظ lead عندما تكون البيانات كافية.
 
-Portfolio positioning: healthcare lead capture and appointment routing assistant.
-
-Status: demo-ready case study.
+الحالة: Demo-ready.
 
 ### Voice AI Sales Call Automation
 
-Problem: sales teams need automated outbound/inbound call handling, memory, lead status updates, and fallback SMS after missed calls.
+المشكلة: فرق المبيعات تحتاج ربط المكالمات بذاكرة العميل، تحديث حالته، والمتابعة عند عدم الرد.
 
-Why it qualifies: the suite includes inbound call trigger, call status handling, and call turn response workflows. It integrates webhook routing, lead/memory storage, AI response generation, and missed-call SMS fallback.
+ما يفعله: يستقبل أحداث المكالمة، يبني سياق المحادثة، يولد ردود AI، يحفظ الذاكرة، ويرسل متابعة عند الحاجة.
 
-Portfolio positioning: voice AI sales automation pipeline.
-
-Status: architecture-ready case study. Needs live credential and webhook validation before public production claims.
+الحالة: Architecture-ready. يحتاج تحقق credentials وwebhooks قبل أي تشغيل production.
 
 ### Automotive Service Reception Assistant
 
-Problem: an automotive service center needs a Telegram receptionist that collects car model, year, service type, slot, name, and phone.
+المشكلة: مراكز الصيانة تحتاج استقبال أولي يجمع بيانات السيارة والخدمة والموعد قبل تدخل الفريق.
 
-Why it qualifies: the workflow has a Telegram trigger, AI receptionist, structured parser, routing, customer replies, and booking confirmation logic.
+ما يفعله: يدير محادثة عربية لجمع نوع السيارة، سنة الموديل، الخدمة المطلوبة، الموعد، الاسم، ورقم الهاتف.
 
-Portfolio positioning: automotive service booking assistant.
+الحالة: Reception demo.
 
-Status: demo-ready, with persistence/admin notifications currently disabled and best described as a reception demo.
-
-## Not Featured As Production-Ready
+## غير معروض كـ production
 
 ### Social Media Content Automation
 
-Reason: good idea and schedule flow, but the inspected version has incomplete publishing flow and a disabled English post node. It should be repaired before being shown as a complete automated publishing system.
+الفكرة جيدة، لكن النسخة التي تمت مراجعتها فيها مسار نشر غير مكتمل ونود توليد إنجليزي غير مفعلة.
 
 ### WhatsApp Healthcare Voice Prototype
 
-Reason: strong concept with voice transcription and booking tools, but it still contains placeholders for production IDs and sheets. It is better treated as a prototype until setup is completed.
+نموذج قوي من ناحية الفكرة، لكنه يحتوي placeholders خاصة بالتشغيل، لذلك لا يتم عرضه كنظام مكتمل.
 
 ### Older Test Workflows
 
-Reason: several older variants contain placeholder expressions, experimental routing, or overlapping approaches. They should not be presented as final client work.
+نسخ تجريبية أو مكررة أو بها تعبيرات placeholder. تصلح كأرشيف داخلي فقط.

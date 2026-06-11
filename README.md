@@ -1,32 +1,41 @@
 # AI Automation Portfolio
 
-Private first draft of an automation portfolio built from read-only n8n workflow review.
+معرض أعمال لأنظمة AI Automation مبنية على n8n و AI Agents.
 
-## What this repo contains
+الموقع العام:
+https://abdalrhmandiaaeldeen-bit.github.io/automation-portfolio/
 
-- A static portfolio page in `index.html`
-- Styling in `styles.css`
-- A curated workflow review in `case-studies.md`
+## الفكرة
 
-No raw n8n workflow exports, credentials, webhook URLs, sheet IDs, phone number IDs, or customer secrets are included.
+بدل عرض أسماء عملاء أو براندات، المعرض يشرح نوع الأوتوميشن نفسه:
 
-## Featured case studies
+- ماذا يستقبل؟
+- كيف يفهم طلب العميل؟
+- أين يحفظ البيانات؟
+- كيف يرد أو ينبه الفريق؟
+- ما المشكلة العملية التي يحلها؟
+
+## الموجود في الريبو
+
+- `index.html`: صفحة الموقع.
+- `styles.css`: تصميم الموقع.
+- `case-studies.md`: ملخص داخلي لأنواع الأوتوميشن المختارة.
+
+لا يحتوي الريبو على exports خام من n8n، ولا credentials، ولا webhook URLs، ولا IDs حساسة، ولا بيانات عملاء.
+
+## نماذج الأوتوميشن المعروضة
 
 1. WhatsApp Ecommerce Sales Assistant
-2. Arabic Publishing Support Assistant
+2. Arabic Support Assistant
 3. Healthcare Chat Booking Assistant
 4. Voice AI Sales Call Automation
 5. Automotive Service Reception Assistant
 
-## Review approach
+## حالة المشروع
 
-The n8n workspace was inspected in read-only mode. Projects were selected when they had a clear business problem, a coherent workflow path, and enough implementation detail to present safely as a demo or case study.
+هذه نسخة Portfolio عامة قابلة للتطوير. الخطوات القادمة المقترحة:
 
-Incomplete or risky workflows were not presented as production-ready.
-
-## Next publishing options
-
-- GitHub Pages for a simple static portfolio
-- Vercel for a polished custom-domain portfolio
-- Netlify as a similar static hosting alternative
-- LinkedIn/Behance posts for individual case studies
+- إضافة اسم براند شخصي ولوجو.
+- إضافة لينك WhatsApp أو LinkedIn للتواصل.
+- إضافة screenshots بعد إخفاء البيانات.
+- إضافة صفحة تفصيلية لكل نوع أوتوميشن.

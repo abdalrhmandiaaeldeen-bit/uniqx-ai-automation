@@ -1,126 +1,152 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AI Automation Portfolio</title>
-    <meta name="description" content="Selected AI automation case studies for sales, support, booking, voice calls, lead capture, and reporting.">
+    <meta name="description" content="معرض أعمال لأنظمة AI Automation تساعد الشركات في المبيعات، خدمة العملاء، الحجز، المكالمات، وتسجيل البيانات.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="AI Automation Portfolio home">
+      <a class="brand" href="#top" aria-label="العودة لبداية الصفحة">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span>AI Automation Portfolio</span>
+        <span>AI Automation</span>
       </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#review">Review</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav" aria-label="التنقل الرئيسي">
+        <a href="#services">الخدمات</a>
+        <a href="#work">الأمثلة</a>
+        <a href="#process">الطريقة</a>
+        <a href="#contact">تواصل</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">n8n automation systems</p>
-          <h1 id="hero-title">Practical AI workflows for sales, support, booking, and content operations.</h1>
-          <p class="hero-text">A curated set of case studies from real automation builds, reviewed before publishing so incomplete experiments stay out of the showcase.</p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#work">View case studies</a>
-            <a class="button secondary" href="#review">See review notes</a>
+          <p class="eyebrow">حلول n8n و AI للشركات</p>
+          <h1 id="hero-title">أبني أوتوميشن يحوّل الرسائل والمكالمات والطلبات إلى نظام شغال.</h1>
+          <p class="hero-text">أصمم تدفقات عمل تربط واتساب، تليجرام، المكالمات، الشيتات، وأنظمة إدارة العملاء بحيث تقلل الشغل اليدوي وتسرّع الرد والمتابعة.</p>
+          <div class="hero-actions" aria-label="الإجراءات الرئيسية">
+            <a class="button primary" href="#work">شوف أمثلة الأوتوميشن</a>
+            <a class="button secondary" href="https://github.com/abdalrhmandiaaeldeen-bit" target="_blank" rel="noreferrer">تواصل عبر GitHub</a>
           </div>
         </div>
-        <div class="system-map" aria-label="Automation workflow illustration">
-          <div class="map-column">
-            <span class="map-node input">WhatsApp</span>
-            <span class="map-node input">Telegram</span>
-            <span class="map-node input">Voice Calls</span>
+
+        <div class="workflow-board" aria-label="رسم مبسط لتدفق الأوتوميشن">
+          <div class="lane">
+            <span class="lane-title">المدخلات</span>
+            <span class="flow-node input">رسالة عميل</span>
+            <span class="flow-node input">مكالمة</span>
+            <span class="flow-node input">طلب حجز</span>
           </div>
-          <div class="map-flow" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="lane center">
+            <span class="lane-title">المعالجة</span>
+            <span class="flow-node core">تصنيف النية</span>
+            <span class="flow-node core">AI Agent</span>
+            <span class="flow-node core">ذاكرة المحادثة</span>
           </div>
-          <div class="map-column center">
-            <span class="map-node core">n8n Router</span>
-            <span class="map-node core">AI Agent</span>
-            <span class="map-node core">Memory</span>
-          </div>
-          <div class="map-flow" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="map-column">
-            <span class="map-node output">Sheets</span>
-            <span class="map-node output">CRM</span>
-            <span class="map-node output">Client Reply</span>
+          <div class="lane">
+            <span class="lane-title">المخرجات</span>
+            <span class="flow-node output">رد فوري</span>
+            <span class="flow-node output">تسجيل Lead</span>
+            <span class="flow-node output">تنبيه للفريق</span>
           </div>
         </div>
       </section>
 
-      <section class="metrics" aria-label="Portfolio summary">
+      <section class="metrics" aria-label="ملخص سريع">
         <div>
           <strong>25</strong>
-          <span>workflows reviewed</span>
+          <span>workflow تمت مراجعتها</span>
         </div>
         <div>
           <strong>5</strong>
-          <span>case studies selected</span>
+          <span>نماذج جاهزة للعرض</span>
         </div>
         <div>
           <strong>0</strong>
-          <span>raw exports published</span>
+          <span>بيانات عملاء منشورة</span>
+        </div>
+      </section>
+
+      <section id="services" class="section services-section" aria-labelledby="services-title">
+        <div class="section-heading">
+          <p class="eyebrow">ماذا أقدم؟</p>
+          <h2 id="services-title">أوتوميشن عملي بدل المهام المتكررة.</h2>
+          <p>الفكرة ليست مجرد chatbot. النظام يستقبل الطلب، يفهمه، يقرر الخطوة المناسبة، يحفظ البيانات، ويرد على العميل أو ينبه الفريق.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-item">
+            <span class="service-index">01</span>
+            <h3>مساعد مبيعات واتساب</h3>
+            <p>يرد على أسئلة المنتجات، يجمع بيانات الطلب، ويحوّل الطلبات الجاهزة إلى جدول متابعة.</p>
+          </article>
+          <article class="service-item">
+            <span class="service-index">02</span>
+            <h3>حجز مواعيد تلقائي</h3>
+            <p>يسأل العميل عن البيانات الناقصة، يحدد التخصص أو الخدمة، ويسجل lead واضح للفريق.</p>
+          </article>
+          <article class="service-item">
+            <span class="service-index">03</span>
+            <h3>مساعد مكالمات ذكي</h3>
+            <p>يدير مراحل المكالمة، يحفظ الذاكرة، يحدث حالة العميل، ويرسل متابعة عند عدم الرد.</p>
+          </article>
+          <article class="service-item">
+            <span class="service-index">04</span>
+            <h3>دعم عملاء عربي</h3>
+            <p>يرد بلهجة مناسبة، يوجّه العميل، ويمنع الردود العشوائية باستخدام قواعد واضحة.</p>
+          </article>
         </div>
       </section>
 
       <section id="work" class="section" aria-labelledby="work-title">
         <div class="section-heading">
-          <p class="eyebrow">Selected work</p>
-          <h2 id="work-title">Case studies with a clear business problem</h2>
+          <p class="eyebrow">أمثلة مجهولة</p>
+          <h2 id="work-title">نماذج أوتوميشن بدون أسماء عملاء أو براندات.</h2>
         </div>
 
         <div class="case-grid">
           <article class="case-card">
             <div class="case-topline">
               <span class="case-type">Ecommerce</span>
-              <span class="case-status">Demo-ready</span>
+              <span class="case-status">جاهز للعرض</span>
             </div>
             <h3>WhatsApp Ecommerce Sales Assistant</h3>
-            <p>Helps shoppers discover products, get prices, request the store link, and submit order details through WhatsApp.</p>
+            <p>يساعد العملاء في اكتشاف المنتجات، معرفة الأسعار، طلب رابط المتجر، وتجميع بيانات الطلب.</p>
             <ul>
-              <li>WhatsApp message normalization</li>
-              <li>Catalog-aware AI sales assistant</li>
-              <li>Order capture to Google Sheets</li>
+              <li>تنظيف وتحويل رسائل واتساب إلى بيانات واضحة</li>
+              <li>AI Assistant مرتبط بسياق المنتجات</li>
+              <li>حفظ الطلبات الجاهزة في جدول متابعة</li>
             </ul>
           </article>
 
           <article class="case-card">
             <div class="case-topline">
-              <span class="case-type">Publishing</span>
-              <span class="case-status">Demo-ready</span>
+              <span class="case-type">Customer Support</span>
+              <span class="case-status">جاهز للعرض</span>
             </div>
-            <h3>Arabic Publishing Support Assistant</h3>
-            <p>Arabic assistant for a publisher handling greetings, book recommendations, contact requests, publishing inquiries, and website links.</p>
+            <h3>Arabic Support Assistant</h3>
+            <p>مساعد عربي يرد على الأسئلة، يرشح اختيارات مناسبة، ويرسل بيانات التواصل أو الروابط المطلوبة.</p>
             <ul>
-              <li>Intent routing</li>
-              <li>Book recommendation branch</li>
-              <li>Egyptian Arabic reply style</li>
+              <li>تصنيف نية العميل</li>
+              <li>مسارات رد مختلفة حسب الطلب</li>
+              <li>أسلوب عربي مهذب ومناسب للسياق</li>
             </ul>
           </article>
 
           <article class="case-card">
             <div class="case-topline">
               <span class="case-type">Healthcare</span>
-              <span class="case-status">Demo-ready</span>
+              <span class="case-status">جاهز للعرض</span>
             </div>
             <h3>Healthcare Chat Booking Assistant</h3>
-            <p>Routes appointment requests, asks for missing patient details, reduces unnecessary AI calls, and saves qualified leads.</p>
+            <p>يرتب طلبات الحجز، يسأل عن البيانات الناقصة، ويحفظ العملاء المهتمين فقط للفريق.</p>
             <ul>
-              <li>Local intent checks</li>
-              <li>AI fallback only when needed</li>
-              <li>Lead saving to Google Sheets</li>
+              <li>اكتشاف نية الحجز بدون استهلاك AI زائد</li>
+              <li>سؤال واحد واضح في كل خطوة</li>
+              <li>تسجيل lead عند وجود بيانات كافية</li>
             </ul>
           </article>
 
@@ -130,57 +156,76 @@
               <span class="case-status">Architecture-ready</span>
             </div>
             <h3>Voice AI Sales Call Automation</h3>
-            <p>Connects call triggers, conversation memory, AI responses, lead updates, and missed-call SMS fallback into one sales flow.</p>
+            <p>يربط المكالمات بذاكرة المحادثة، تحديث حالة العميل، وردود متابعة عند عدم الرد.</p>
             <ul>
-              <li>Voice call webhook handling</li>
-              <li>Lead and memory records</li>
-              <li>SMS fallback messaging</li>
+              <li>Webhook للمكالمات وحالة المكالمة</li>
+              <li>حفظ ملخصات وذاكرة العميل</li>
+              <li>رسائل متابعة تلقائية</li>
             </ul>
           </article>
 
           <article class="case-card">
             <div class="case-topline">
-              <span class="case-type">Automotive</span>
-              <span class="case-status">Reception demo</span>
+              <span class="case-type">Service Booking</span>
+              <span class="case-status">Demo</span>
             </div>
             <h3>Automotive Service Reception Assistant</h3>
-            <p>Telegram receptionist flow for collecting vehicle model, year, service type, appointment slot, name, and phone.</p>
+            <p>مساعد استقبال يجمع نوع الخدمة، الموعد، الاسم، ورقم الهاتف قبل تأكيد الطلب.</p>
             <ul>
-              <li>Structured AI output parser</li>
-              <li>Arabic booking conversation</li>
-              <li>Confirmation route</li>
+              <li>محادثة عربية طبيعية</li>
+              <li>Structured output لمنع الفوضى</li>
+              <li>مسار تأكيد منفصل عند اكتمال البيانات</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section id="review" class="section review-section" aria-labelledby="review-title">
+      <section id="process" class="section process-section" aria-labelledby="process-title">
         <div class="section-heading">
-          <p class="eyebrow">Quality filter</p>
-          <h2 id="review-title">What did not get presented as finished work</h2>
+          <p class="eyebrow">طريقة العمل</p>
+          <h2 id="process-title">من فكرة مبهمة إلى workflow قابل للتجربة.</h2>
         </div>
-        <div class="review-list">
+        <div class="process-steps">
           <div>
-            <h3>Social Media Content Automation</h3>
-            <p>Kept out of featured work because the inspected version has an incomplete publishing path and a disabled English generation node.</p>
+            <span>01</span>
+            <h3>تحديد المشكلة</h3>
+            <p>نحدد المهمة المتكررة: ردود، حجوزات، leads، مكالمات، أو تحديث بيانات.</p>
           </div>
           <div>
-            <h3>WhatsApp Healthcare Voice Prototype</h3>
-            <p>Useful prototype, but it still contains production placeholders, so it should not be sold as a finished live workflow yet.</p>
+            <span>02</span>
+            <h3>تصميم المسار</h3>
+            <p>نرسم المدخلات، القرارات، الأدوات، ومتى يحتاج النظام تدخل بشري.</p>
           </div>
           <div>
-            <h3>Older test workflows</h3>
-            <p>Several early builds are experimental or duplicated. They are better used as internal history, not portfolio proof.</p>
+            <span>03</span>
+            <h3>بناء وتجربة</h3>
+            <p>نبني workflow على n8n، نجرب الحالات المهمة، ونمنع الردود أو الحفظ العشوائي.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <h3>تسليم واضح</h3>
+            <p>نجهز شرح التشغيل، المتطلبات، وحدود النسخة التجريبية قبل تشغيلها للعملاء.</p>
           </div>
         </div>
       </section>
 
+      <section class="section quality-section" aria-labelledby="quality-title">
+        <div>
+          <p class="eyebrow">مهم في العرض</p>
+          <h2 id="quality-title">لا أعرض Workflow ناقص كأنه نظام production.</h2>
+        </div>
+        <p>قبل نشر أي مثال، تتم مراجعة الفكرة والمسار وحالة التكاملات. النماذج التي تحتوي placeholders أو مسارات نشر ناقصة يتم تصنيفها كـ prototype فقط.</p>
+      </section>
+
       <section id="contact" class="section contact-section" aria-labelledby="contact-title">
         <div>
-          <p class="eyebrow">Available for builds</p>
-          <h2 id="contact-title">AI automation for operations that need fewer manual steps.</h2>
+          <p class="eyebrow">جاهز للتطوير</p>
+          <h2 id="contact-title">لو عندك شغل يدوي بيتكرر، غالبا نقدر نحوله لأوتوميشن.</h2>
         </div>
-        <p>Chatbots, workflow automation, lead capture, voice AI, appointment booking, CRM updates, and reporting pipelines.</p>
+        <div class="contact-actions">
+          <a class="button primary light" href="https://github.com/abdalrhmandiaaeldeen-bit" target="_blank" rel="noreferrer">افتح GitHub</a>
+          <a class="button secondary light" href="https://github.com/abdalrhmandiaaeldeen-bit/automation-portfolio" target="_blank" rel="noreferrer">شوف ملفات المشروع</a>
+        </div>
       </section>
     </main>
   </body>
