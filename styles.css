@@ -68,15 +68,56 @@ body::before {
   mask-image: linear-gradient(180deg, black, transparent 70%);
 }
 
-#heroNetwork {
+.automation-current {
   position: fixed;
   inset: 0;
   z-index: 0;
   width: 100vw;
   height: 100vh;
-  opacity: 0.46;
+  overflow: hidden;
   pointer-events: none;
 }
+
+.automation-current::before,
+.automation-current::after {
+  position: absolute;
+  inset: -20%;
+  content: "";
+  opacity: 0.34;
+  background:
+    linear-gradient(116deg, transparent 0 46%, color-mix(in srgb, var(--cyan) 16%, transparent) 46% 46.4%, transparent 46.4% 100%),
+    linear-gradient(116deg, transparent 0 57%, color-mix(in srgb, var(--accent) 14%, transparent) 57% 57.35%, transparent 57.35% 100%),
+    linear-gradient(116deg, transparent 0 68%, color-mix(in srgb, var(--green) 10%, transparent) 68% 68.28%, transparent 68.28% 100%);
+  transform: translate3d(0, 0, 0);
+  animation: current-drift 28s linear infinite;
+}
+
+.automation-current::after {
+  opacity: 0.18;
+  transform: rotate(180deg);
+  animation-duration: 42s;
+  animation-direction: reverse;
+}
+
+.automation-current span {
+  position: absolute;
+  left: -18vw;
+  width: clamp(90px, 18vw, 260px);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--cyan) 58%, transparent), transparent);
+  border-radius: 999px;
+  filter: blur(0.1px);
+  opacity: 0;
+  transform: rotate(-12deg);
+  animation: current-pulse 9s ease-in-out infinite;
+}
+
+.automation-current span:nth-child(1) { top: 16%; animation-delay: 0s; }
+.automation-current span:nth-child(2) { top: 28%; animation-delay: 1.8s; width: clamp(120px, 24vw, 340px); }
+.automation-current span:nth-child(3) { top: 42%; animation-delay: 3.1s; background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 48%, transparent), transparent); }
+.automation-current span:nth-child(4) { top: 58%; animation-delay: 4.7s; width: clamp(100px, 20vw, 300px); }
+.automation-current span:nth-child(5) { top: 73%; animation-delay: 6.1s; background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--green) 42%, transparent), transparent); }
+.automation-current span:nth-child(6) { top: 86%; animation-delay: 7.4s; width: clamp(80px, 15vw, 220px); }
 
 a {
   color: inherit;
@@ -1257,6 +1298,18 @@ h3 {
   100% { transform: translateX(330%); opacity: 0; }
 }
 
+@keyframes current-drift {
+  0% { transform: translate3d(-3%, 0, 0); }
+  100% { transform: translate3d(3%, -4%, 0); }
+}
+
+@keyframes current-pulse {
+  0% { opacity: 0; transform: translateX(0) rotate(-12deg); }
+  18% { opacity: 0.72; }
+  78% { opacity: 0.2; }
+  100% { opacity: 0; transform: translateX(128vw) rotate(-12deg); }
+}
+
 @keyframes live-pulse {
   0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--green) 46%, transparent); }
   50% { box-shadow: 0 0 0 7px transparent; }
@@ -1279,6 +1332,12 @@ h3 {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .automation-current span,
+  .automation-current::before,
+  .automation-current::after {
+    animation: none;
   }
 }
 
@@ -1333,6 +1392,14 @@ h3 {
 
   .hero {
     padding-top: 46px;
+  }
+
+  .automation-current {
+    opacity: 0.65;
+  }
+
+  .automation-current span {
+    animation-duration: 14s;
   }
 
   .hero-visual {

@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Uniqx by Abdalrhman Diaa | AI Automation Systems</title>
     <meta name="description" content="Uniqx by Abdalrhman Diaa designs AI automation systems with n8n, OpenAI, WhatsApp, Telegram, CRMs, APIs, and workflow architecture.">
-    <link rel="stylesheet" href="./styles.css?v=20260612-sun-moon-toggle">
+    <link rel="stylesheet" href="./styles.css?v=20260612-soft-current">
   </head>
   <body>
-    <canvas id="heroNetwork" aria-hidden="true"></canvas>
+    <div class="automation-current" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Uniqx home">
@@ -442,106 +449,6 @@
         label.textContent = next === 'dark' ? 'Dark' : 'Light';
       });
 
-      const canvas = document.getElementById('heroNetwork');
-      const ctx = canvas.getContext('2d');
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const pointer = { x: 0, y: 0, active: false };
-      let width = 0;
-      let height = 0;
-      let nodes = [];
-      let animationFrame = 0;
-
-      const themeColor = (name) => getComputedStyle(root).getPropertyValue(name).trim();
-
-      const resizeCanvas = () => {
-        const ratio = Math.min(window.devicePixelRatio || 1, 2);
-        width = window.innerWidth;
-        height = window.innerHeight;
-        canvas.width = Math.max(1, Math.floor(width * ratio));
-        canvas.height = Math.max(1, Math.floor(height * ratio));
-        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-        const count = width < 720 ? 42 : 72;
-        nodes = Array.from({ length: count }, (_, index) => ({
-          x: Math.random() * width,
-          y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.28,
-          vy: (Math.random() - 0.5) * 0.28,
-          r: 1.6 + Math.random() * 2.6,
-          label: index % 13 === 0 ? ['n8n', 'AI', 'CRM', 'API', 'Bot'][index % 5] : ''
-        }));
-      };
-
-      const drawNetwork = () => {
-        ctx.clearRect(0, 0, width, height);
-        const cyan = themeColor('--cyan') || '#22d3ee';
-        const violet = themeColor('--violet') || '#8b5cf6';
-        const green = themeColor('--green') || '#10b981';
-        const text = themeColor('--muted') || '#94a3b8';
-        const colors = [cyan, violet, green];
-
-        nodes.forEach((node, index) => {
-          if (!reduceMotion.matches) {
-            node.x += node.vx;
-            node.y += node.vy;
-          }
-          if (node.x < 0 || node.x > width) node.vx *= -1;
-          if (node.y < 0 || node.y > height) node.vy *= -1;
-
-          if (pointer.active) {
-            const dx = pointer.x - node.x;
-            const dy = pointer.y - node.y;
-            const distance = Math.hypot(dx, dy);
-            if (distance < 180 && distance > 0) {
-              const pull = (180 - distance) / 180 * 0.01;
-              node.vx += dx * pull;
-              node.vy += dy * pull;
-            }
-          }
-
-          for (let otherIndex = index + 1; otherIndex < nodes.length; otherIndex++) {
-            const other = nodes[otherIndex];
-            const dx = other.x - node.x;
-            const dy = other.y - node.y;
-            const distance = Math.hypot(dx, dy);
-            if (distance < 132) {
-              ctx.beginPath();
-              ctx.moveTo(node.x, node.y);
-              ctx.lineTo(other.x, other.y);
-              ctx.strokeStyle = colors[index % colors.length] + Math.floor((1 - distance / 132) * 70).toString(16).padStart(2, '0');
-              ctx.lineWidth = 0.7;
-              ctx.stroke();
-            }
-          }
-
-          ctx.beginPath();
-          ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
-          ctx.fillStyle = colors[index % colors.length];
-          ctx.globalAlpha = 0.72;
-          ctx.fill();
-          ctx.globalAlpha = 1;
-
-          if (node.label) {
-            ctx.font = '600 10px system-ui';
-            ctx.fillStyle = text;
-            ctx.textAlign = 'center';
-            ctx.fillText(node.label, node.x, node.y - 8);
-          }
-        });
-
-        if (!reduceMotion.matches) {
-          animationFrame = requestAnimationFrame(drawNetwork);
-        }
-      };
-
-      window.addEventListener('pointermove', (event) => {
-        pointer.x = event.clientX;
-        pointer.y = event.clientY;
-        pointer.active = true;
-      });
-      window.addEventListener('blur', () => {
-        pointer.active = false;
-      });
-
       const workflowCard = document.getElementById('workflowCard');
       workflowCard.addEventListener('pointermove', (event) => {
         const rect = workflowCard.getBoundingClientRect();
@@ -587,17 +494,6 @@
       }, { threshold: 0.8 });
       counters.forEach((counter) => countObserver.observe(counter));
 
-      resizeCanvas();
-      drawNetwork();
-      window.addEventListener('resize', () => {
-        cancelAnimationFrame(animationFrame);
-        resizeCanvas();
-        drawNetwork();
-      });
-      reduceMotion.addEventListener('change', () => {
-        cancelAnimationFrame(animationFrame);
-        drawNetwork();
-      });
     </script>
   </body>
 </html>
