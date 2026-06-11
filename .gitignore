@@ -1,0 +1,8 @@
+work/
+outputs/
+.env
+.env.*
+*.log
+node_modules/
+dist/
+build/

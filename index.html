@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Automation Portfolio</title>
+    <meta name="description" content="Selected AI automation case studies built with n8n, OpenAI, WhatsApp, Telegram, Vapi, Airtable, and Google Sheets.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="AI Automation Portfolio home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>AI Automation Portfolio</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#review">Review</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">n8n automation systems</p>
+          <h1 id="hero-title">Practical AI workflows for sales, support, booking, and content operations.</h1>
+          <p class="hero-text">A curated set of case studies from real automation builds, reviewed before publishing so incomplete experiments stay out of the showcase.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#work">View case studies</a>
+            <a class="button secondary" href="#review">See review notes</a>
+          </div>
+        </div>
+        <div class="system-map" aria-label="Automation workflow illustration">
+          <div class="map-column">
+            <span class="map-node input">WhatsApp</span>
+            <span class="map-node input">Telegram</span>
+            <span class="map-node input">Vapi</span>
+          </div>
+          <div class="map-flow" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="map-column center">
+            <span class="map-node core">n8n Router</span>
+            <span class="map-node core">AI Agent</span>
+            <span class="map-node core">Memory</span>
+          </div>
+          <div class="map-flow" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="map-column">
+            <span class="map-node output">Sheets</span>
+            <span class="map-node output">Airtable</span>
+            <span class="map-node output">Client Reply</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Portfolio summary">
+        <div>
+          <strong>25</strong>
+          <span>workflows reviewed</span>
+        </div>
+        <div>
+          <strong>5</strong>
+          <span>case studies selected</span>
+        </div>
+        <div>
+          <strong>0</strong>
+          <span>raw exports published</span>
+        </div>
+      </section>
+
+      <section id="work" class="section" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Case studies with a clear business problem</h2>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-topline">
+              <span class="case-type">Ecommerce</span>
+              <span class="case-status">Demo-ready</span>
+            </div>
+            <h3>Toda WhatsApp Commerce Assistant</h3>
+            <p>Helps shoppers discover products, get prices, request the store link, and submit order details through WhatsApp.</p>
+            <ul>
+              <li>WhatsApp message normalization</li>
+              <li>Catalog-aware AI sales assistant</li>
+              <li>Order capture to Google Sheets</li>
+            </ul>
+          </article>
+
+          <article class="case-card">
+            <div class="case-topline">
+              <span class="case-type">Publishing</span>
+              <span class="case-status">Demo-ready</span>
+            </div>
+            <h3>Ibda3 Customer Support Assistant</h3>
+            <p>Arabic assistant for a publisher handling greetings, book recommendations, contact requests, publishing inquiries, and website links.</p>
+            <ul>
+              <li>Intent routing</li>
+              <li>Book recommendation branch</li>
+              <li>Egyptian Arabic reply style</li>
+            </ul>
+          </article>
+
+          <article class="case-card">
+            <div class="case-topline">
+              <span class="case-type">Healthcare</span>
+              <span class="case-status">Demo-ready</span>
+            </div>
+            <h3>Clinic Telegram Booking Assistant</h3>
+            <p>Routes appointment requests, asks for missing patient details, reduces unnecessary AI calls, and saves qualified leads.</p>
+            <ul>
+              <li>Local intent checks</li>
+              <li>AI fallback only when needed</li>
+              <li>Lead saving to Google Sheets</li>
+            </ul>
+          </article>
+
+          <article class="case-card">
+            <div class="case-topline">
+              <span class="case-type">Voice AI</span>
+              <span class="case-status">Architecture-ready</span>
+            </div>
+            <h3>Vapi Sales Call Automation Suite</h3>
+            <p>Connects call triggers, conversation memory, AI responses, lead updates, and missed-call SMS fallback into one sales flow.</p>
+            <ul>
+              <li>Vapi webhook handling</li>
+              <li>Airtable lead and memory records</li>
+              <li>Twilio fallback messaging</li>
+            </ul>
+          </article>
+
+          <article class="case-card">
+            <div class="case-topline">
+              <span class="case-type">Automotive</span>
+              <span class="case-status">Reception demo</span>
+            </div>
+            <h3>Dahab BMW Reception Demo</h3>
+            <p>Telegram receptionist flow for collecting vehicle model, year, service type, appointment slot, name, and phone.</p>
+            <ul>
+              <li>Structured AI output parser</li>
+              <li>Arabic booking conversation</li>
+              <li>Confirmation route</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="review" class="section review-section" aria-labelledby="review-title">
+        <div class="section-heading">
+          <p class="eyebrow">Quality filter</p>
+          <h2 id="review-title">What did not get presented as finished work</h2>
+        </div>
+        <div class="review-list">
+          <div>
+            <h3>Content Facebook</h3>
+            <p>Kept out of featured work because the inspected version has an incomplete publishing path and a disabled English generation node.</p>
+          </div>
+          <div>
+            <h3>Generic WhatsApp Clinic Bot</h3>
+            <p>Useful prototype, but it still contains production placeholders, so it should not be sold as a finished live workflow yet.</p>
+          </div>
+          <div>
+            <h3>Older test workflows</h3>
+            <p>Several early builds are experimental or duplicated. They are better used as internal history, not portfolio proof.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Available for builds</p>
+          <h2 id="contact-title">AI automation for operations that need fewer manual steps.</h2>
+        </div>
+        <p>Chatbots, workflow automation, lead capture, voice AI, appointment booking, CRM updates, and reporting pipelines.</p>
+      </section>
+    </main>
+  </body>
+</html>
