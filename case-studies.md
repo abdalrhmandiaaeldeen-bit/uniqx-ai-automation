@@ -4,7 +4,7 @@ This review is based on read-only inspection. Nothing was changed in n8n.
 
 ## Featured
 
-### Toda WhatsApp Commerce Assistant
+### WhatsApp Ecommerce Sales Assistant
 
 Problem: customers need fast product discovery, price answers, website links, and order collection over WhatsApp.
 
@@ -14,7 +14,7 @@ Portfolio positioning: ecommerce WhatsApp assistant for catalog support and orde
 
 Status: demo-ready case study. Production activation and credential checks should be handled separately.
 
-### Ibda3 Customer Support Assistant
+### Arabic Publishing Support Assistant
 
 Problem: a publisher needs Arabic customer support for books, publishing inquiries, website links, contact info, and recommendations.
 
@@ -24,7 +24,7 @@ Portfolio positioning: Arabic customer support assistant for publishing and ecom
 
 Status: demo-ready case study.
 
-### Clinic Telegram Booking Assistant
+### Healthcare Chat Booking Assistant
 
 Problem: clinics lose leads when booking requests and specialty questions come through chat without structured follow-up.
 
@@ -34,17 +34,17 @@ Portfolio positioning: healthcare lead capture and appointment routing assistant
 
 Status: demo-ready case study.
 
-### Vapi Sales Call Automation Suite
+### Voice AI Sales Call Automation
 
 Problem: sales teams need automated outbound/inbound call handling, memory, lead status updates, and fallback SMS after missed calls.
 
-Why it qualifies: the suite includes inbound call trigger, call status handling, and call turn response workflows. It integrates webhook routing, Airtable lead/memory storage, Vapi calls, OpenAI response generation, and Twilio fallback SMS.
+Why it qualifies: the suite includes inbound call trigger, call status handling, and call turn response workflows. It integrates webhook routing, lead/memory storage, AI response generation, and missed-call SMS fallback.
 
 Portfolio positioning: voice AI sales automation pipeline.
 
 Status: architecture-ready case study. Needs live credential and webhook validation before public production claims.
 
-### Dahab BMW Reception Demo
+### Automotive Service Reception Assistant
 
 Problem: an automotive service center needs a Telegram receptionist that collects car model, year, service type, slot, name, and phone.
 
@@ -56,15 +56,14 @@ Status: demo-ready, with persistence/admin notifications currently disabled and 
 
 ## Not Featured As Production-Ready
 
-### Content Facebook
+### Social Media Content Automation
 
 Reason: good idea and schedule flow, but the inspected version has incomplete publishing flow and a disabled English post node. It should be repaired before being shown as a complete automated publishing system.
 
-### Generic WhatsApp Clinic Bot
+### WhatsApp Healthcare Voice Prototype
 
 Reason: strong concept with voice transcription and booking tools, but it still contains placeholders for production IDs and sheets. It is better treated as a prototype until setup is completed.
 
-### Older Clinic / Test Workflows
+### Older Test Workflows
 
 Reason: several older variants contain placeholder expressions, experimental routing, or overlapping approaches. They should not be presented as final client work.
-

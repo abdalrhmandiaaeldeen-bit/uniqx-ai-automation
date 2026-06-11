@@ -12,11 +12,11 @@ No raw n8n workflow exports, credentials, webhook URLs, sheet IDs, phone number 
 
 ## Featured case studies
 
-1. Toda WhatsApp Commerce Assistant
-2. Ibda3 Customer Support Assistant
-3. Clinic Telegram Booking Assistant
-4. Vapi Sales Call Automation Suite
-5. Dahab BMW Reception Demo
+1. WhatsApp Ecommerce Sales Assistant
+2. Arabic Publishing Support Assistant
+3. Healthcare Chat Booking Assistant
+4. Voice AI Sales Call Automation
+5. Automotive Service Reception Assistant
 
 ## Review approach
 
@@ -30,4 +30,3 @@ Incomplete or risky workflows were not presented as production-ready.
 - Vercel for a polished custom-domain portfolio
 - Netlify as a similar static hosting alternative
 - LinkedIn/Behance posts for individual case studies
-
