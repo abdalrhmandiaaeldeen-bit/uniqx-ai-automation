@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Uniqx by Abdalrhman Diaa | AI Automation Systems</title>
     <meta name="description" content="Uniqx by Abdalrhman Diaa designs AI automation systems with n8n, OpenAI, WhatsApp, Telegram, CRMs, APIs, and workflow architecture.">
-    <link rel="stylesheet" href="./styles.css?v=20260612-system-polish">
+    <link rel="stylesheet" href="./styles.css?v=20260612-global-network">
   </head>
   <body>
+    <canvas id="heroNetwork" aria-hidden="true"></canvas>
+
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Uniqx home">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-mark" aria-hidden="true">
+          <img src="./assets/uniqx-logo-enhanced.png?v=20260611-uniqx-official" alt="">
+        </span>
         <span>
           <strong>Uniqx</strong>
           <small>by Abdalrhman Diaa</small>
@@ -32,7 +36,6 @@
 
     <main id="top">
       <section class="hero" aria-label="Uniqx AI automation hero">
-        <canvas id="heroNetwork" aria-hidden="true"></canvas>
         <div class="flow-lines" aria-hidden="true">
           <span></span>
           <span></span>
@@ -448,14 +451,13 @@
       const themeColor = (name) => getComputedStyle(root).getPropertyValue(name).trim();
 
       const resizeCanvas = () => {
-        const rect = canvas.getBoundingClientRect();
         const ratio = Math.min(window.devicePixelRatio || 1, 2);
-        width = rect.width;
-        height = rect.height;
+        width = window.innerWidth;
+        height = window.innerHeight;
         canvas.width = Math.max(1, Math.floor(width * ratio));
         canvas.height = Math.max(1, Math.floor(height * ratio));
         ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-        const count = width < 720 ? 36 : 58;
+        const count = width < 720 ? 42 : 72;
         nodes = Array.from({ length: count }, (_, index) => ({
           x: Math.random() * width,
           y: Math.random() * height,
@@ -528,13 +530,12 @@
         }
       };
 
-      canvas.addEventListener('pointermove', (event) => {
-        const rect = canvas.getBoundingClientRect();
-        pointer.x = event.clientX - rect.left;
-        pointer.y = event.clientY - rect.top;
+      window.addEventListener('pointermove', (event) => {
+        pointer.x = event.clientX;
+        pointer.y = event.clientY;
         pointer.active = true;
       });
-      canvas.addEventListener('pointerleave', () => {
+      window.addEventListener('blur', () => {
         pointer.active = false;
       });
 
