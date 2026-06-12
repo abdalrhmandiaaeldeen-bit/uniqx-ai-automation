@@ -196,9 +196,15 @@ main {
   color: var(--muted);
   font-size: 13px;
   font-weight: 800;
+  scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
 }
 
 .nav a {
+  white-space: nowrap;
   text-decoration: none;
 }
 
@@ -697,6 +703,7 @@ h3 {
 .control-card,
 .integration-card,
 .tour-shell,
+.capability-shell,
 .story-card {
   background: color-mix(in srgb, var(--surface) 86%, transparent);
   border: 1px solid var(--line);
@@ -1457,6 +1464,139 @@ h3 {
   border-color: color-mix(in srgb, var(--green) 46%, var(--line));
 }
 
+.capability-section {
+  padding-top: 54px;
+}
+
+.capability-shell {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: clamp(18px, 3vw, 26px);
+  background:
+    radial-gradient(circle at 18% 10%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 18rem),
+    radial-gradient(circle at 84% 70%, color-mix(in srgb, var(--cyan) 13%, transparent), transparent 22rem),
+    color-mix(in srgb, var(--surface) 86%, transparent);
+}
+
+.capability-menu {
+  display: grid;
+  gap: 10px;
+}
+
+.capability-menu button {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 76px;
+  padding: 14px;
+  color: var(--muted);
+  text-align: left;
+  background: color-mix(in srgb, var(--bg) 28%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+  font: inherit;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.capability-menu button:hover,
+.capability-menu button.is-active {
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 15%, var(--surface));
+  border-color: color-mix(in srgb, var(--cyan) 46%, var(--line));
+  transform: translateX(2px);
+}
+
+.capability-menu span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  color: color-mix(in srgb, var(--cyan) 82%, var(--text));
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 1000;
+}
+
+.capability-menu strong {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.capability-panel {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  min-height: 430px;
+  padding: clamp(22px, 4vw, 34px);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.capability-panel h3 {
+  max-width: 760px;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.05;
+}
+
+.capability-panel p:not(.eyebrow) {
+  max-width: 720px;
+  margin: -6px 0 0;
+  color: var(--muted);
+}
+
+.capability-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.capability-flow article {
+  min-height: 154px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding: 18px;
+  background: color-mix(in srgb, var(--bg) 30%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.capability-flow small {
+  color: color-mix(in srgb, var(--cyan) 78%, var(--text));
+  font-size: 11px;
+  font-weight: 1000;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.capability-flow strong {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.capability-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.capability-tools span {
+  padding: 7px 10px;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--surface) 78%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
 .tour-section {
   padding-top: 48px;
 }
@@ -1673,6 +1813,11 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .capability-shell,
+  .capability-flow {
+    grid-template-columns: 1fr;
+  }
+
   .tour-board {
     grid-template-columns: 1fr;
   }
@@ -1749,6 +1894,8 @@ h3 {
   .control-grid,
   .integration-wall,
   .story-grid,
+  .capability-shell,
+  .capability-flow,
   .mini-cta,
   .mockup-screen,
   .mockup-panels {
